@@ -1,0 +1,88 @@
+{
+  "themeColors": {
+    "dark-bg": "#1e1f23",
+    "dark-card": "#282a2e",
+    "dark-sidebar": "#1c1d20",
+    "dark-accent-red": "#E54957",
+    "dark-text": "#f0f2f5",
+    "dark-subtext": "#a0a3a7"
+  },
+  "sidebar": {
+    "title": "GAMEVERSE",
+    "menuItems": [
+      { "name": "Home", "icon": "Home", "active": true },
+      { "name": "Category", "icon": "Category", "active": false },
+      { "name": "Library", "icon": "Books", "active": false },
+      { "name": "Community", "icon": "Users", "active": false },
+      { "name": "Friends", "icon": "Users", "active": false, "count": 2 },
+      { "name": "Wishlist", "icon": "Heart", "active": false },
+      { "name": "Downloads", "icon": "Download", "active": false }
+    ],
+    "utilityItems": [
+      { "name": "Settings", "icon": "Settings" },
+      { "name": "Help", "icon": "HelpCircle" }
+    ]
+  },
+  "friendsPanel": {
+    "friendsList": [
+      { "name": "CrimsonTiger67", "status": "Playing Resident Evil 4", "img": "1" },
+      { "name": "st3alth_sniper", "status": "Playing Fortnite", "img": "2" }
+    ],
+    
+    "recentlyPlayed": [
+      { "name": "Hitman World of Assas...", "progress": 72 },
+      { "name": "Forza Horizon 5", "progress": 47 }
+    ]
+  },
+
+  "featuredBanner": {
+    "title": "Hogwarts Legacy",
+    "description": "Hogwarts Legacy is an immersive, open-world action RPG set in the world first introduced in the Harry Potter books.",
+    "tags": ["Magic", "Fantasy", "Open World", "Adventure"],
+    "priceOld": "35.99",
+    "priceNew": "24.00",
+    "imageUrl": "https://via.placeholder.com/1400x450/3d3f44/ffffff?text=Hogwarts+Legacy+Banner"
+  },
+
+  "gameCategories": [
+    {
+      "title": "Action & Adventure",
+      "games": [
+        { "title": "MARVEL'S SPIDER-MAN 2", "price": "69.00" },
+        { "title": "MORTAL KOMBAT 1", "price": "67.99" },
+        { "title": "FORTNITE", "price": "54.00" },
+        { "title": "Hogwarts Legacy", "price": "24.00" }
+      ]
+    },
+
+    {
+      "title": "Sports",
+      "games": [
+        { "title": "FIFA 25", "price": "79.99" },
+        { "title": "NBA 2K24", "price": "59.99" },
+        { "title": "Rocket League", "price": "0.00" },
+        { "title": "F1 2024", "price": "69.99" }
+      ]
+    },
+
+    {
+      "title": "Arcade Classics",
+      "games": [
+        { "title": "PAC-MAN Championship", "price": "19.99" },
+        { "title": "Street Fighter 6", "price": "49.99" },
+        { "title": "Tetris Effect", "price": "39.99" },
+        { "title": "Celeste", "price": "14.99" }
+      ]
+    },
+
+    {
+      "title": "Car & Racing",
+      "games": [
+        { "title": "Need for Speed Unbound", "price": "59.99" },
+        { "title": "Forza Horizon 5", "price": "49.99" },
+        { "title": "Dirt Rally 2.0", "price": "29.99" },
+        { "title": "Assetto Corsa", "price": "19.99" }
+      ]
+    }
+  ]
+}
