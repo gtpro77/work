@@ -7,7 +7,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 
  
-const Carousel = () => {
+const SlidePro = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const scroll = (direction: "left" | "right") => {
@@ -75,4 +75,4 @@ const Carousel = () => {
   );
 };
 
-export default Carousel;
+export default SlidePro;

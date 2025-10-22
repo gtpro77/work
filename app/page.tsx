@@ -1,5 +1,5 @@
 "use client";
-import Carousel from "./testpro/page";
+import SlidePro from "./testpro/page";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -341,7 +341,7 @@ export default function DashBoard() {
         </aside>
       </div>
       
-      <Carousel/> 
+      <SlidePro/> 
 
       {/* Neon accents floating */}
       <div className="pointer-events-none fixed inset-0 -z-10">
