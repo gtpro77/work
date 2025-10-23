@@ -2,7 +2,7 @@
 
 
 
-export function CarouselSize() {
+export default function CarouselSize() {
 
   return (
     
