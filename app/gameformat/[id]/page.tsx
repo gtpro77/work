@@ -1,8 +1,10 @@
 import React from "react";
-import GameClient from "./GameClient"; // client component (see below)
+import GameClient from "./GameClient"; // client component
 
-type Props = { params: { id: string } };
-
-export default function Page({ params }: Props) {
+export default async function Page({
+  params,
+}: {
+  params: { id: string };
+}) {
   return <GameClient id={params.id} />;
 }
