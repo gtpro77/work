@@ -1,14 +1,8 @@
 "use client";
-import game from "../gameformat/fullnames.json";
-import * as React from "react"
 
-import Image from "next/image";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
 
 
 export function CarouselSize() {
-  const router = useRouter();
 
   return (
     

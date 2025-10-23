@@ -1,4 +1,6 @@
 "use client";
+import { House } from 'lucide-react';
+
 import SlidePro from "./testpro/page";
 import React from "react";
 import Link from "next/link";
@@ -17,9 +19,9 @@ export default function DashBoard() {
         {/* SIDEBAR */}
         <aside className="md:col-span-2 lg:col-span-2 hidden md:flex flex-col gap-6">
           <div className="px-3 py-4 rounded-2xl bg-gradient-to-b from-[#0f1724] to-[#071022] shadow-lg">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 flex items-center justify-center text-black font-bold">
-                CH
+            <div className="flex items-center gap-3 ml-2">
+              <div className="w-10 h-10 rounded-full  flex items-center justify-center text-black font-bold">
+                <Image src="/mainlogo.png" width={40} height={40} alt="mainlogo" className="rounded-lg "  ></Image>
               </div>
               <div>
                 <div className="text-sm font-semibold">CLASHHUB</div>
@@ -47,22 +49,7 @@ export default function DashBoard() {
                      active:bg-[#E54957] active:text-black"
         >
           {/* 👇 Paste your own icon here */}
-          <svg
-            width="14"
-            height="14"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M3 12h18"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              opacity="0.9"
-            />
-          </svg>
+          {[,"<House/>","<House/>","<House/>",]}
         </div>
         <div className="text-sm font-medium group-hover:text-white group-active:text-black">
           {item}
@@ -75,12 +62,12 @@ export default function DashBoard() {
 
              <nav className="mt-6 flex flex-col gap-2">
   {[
-    { name: "Home", active: true },
-    { name: "Categories", active: false },
-    { name: "Library", active: false },
-    { name: "Community", active: false },
-    { name: "Friends", active: false },
-    { name: "Settings", active: false },
+    { name: "Home", active: true,icon:"<House />" },
+    { name: "Categories", active: false ,icon:"<House />"},
+    { name: "Library", active: false ,icon:"<House />"},
+    { name: "Community", active: false ,icon:"<House />"},
+    { name: "Friends", active: false ,icon:"<House />"},
+    { name: "Settings", active: false ,icon:"<House />"},
   ].map((item, idx) => (
     <a
       key={idx}
@@ -94,28 +81,13 @@ export default function DashBoard() {
     >
       <div
         className={`w-8 h-8 rounded-full flex items-center justify-center transition-all
-          ${
-            item.active
+          ${item
+            
               ? "bg-gradient-to-r from-[#E54957] to-pink-600 text-black"
               : "bg-white/5 group-hover:bg-[#E54957]/30 text-white"
           }`}
-      >
-        <svg
-          width="14"
-          height="14"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M3 12h18"
-            stroke="currentColor"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            opacity="0.9"
-          />
-        </svg>
+      ><House/>
+        
       </div>
       <div className="text-sm font-medium">{item.name}</div>
       
@@ -129,15 +101,18 @@ export default function DashBoard() {
 </nav>
 
 
-
-            <button className="relative overflow-hidden px-6 py-3 rounded-full bg-[#E54957] text-white font-semibold group transition-all duration-300">
+<div className=" inline">
+            <button className="relative overflow-hidden px-6 py-3 z-10 rounded-full bg-[#E54957] text-white font-semibold group transition-all duration-300">
   <span className="relative z-10">Play Now</span>
 
   {/* Sliding circle */}
-  <span className="absolute left-0 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white text-black flex items-center justify-center transform -translate-x-full group-hover:translate-x-[calc(100%+2rem)] transition-transform duration-700 ease-out">
+  <span className="absolute right-0 -z-10 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white text-black flex items-center justify-center transform -translate-x-full group-hover:translate-x-[calc(100%+2rem)] transition-transform duration-700 ease-out">
     →
   </span>
 </button>
+<span className="absolute right-0 hidden hover:flex hover:z-10 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white text-black  items-center justify-center transform -translate-x-full group-hover:translate-x-[calc(100%+2rem)] transition-transform duration-700 ease-out">
+    →
+  </span></div>
 
 
 
@@ -175,17 +150,15 @@ export default function DashBoard() {
               <div className="relative flex-1">
                 <input
                   placeholder="Search games, genres, players..."
-                  className="w-full bg-[#071021] placeholder:text-slate-500 rounded-2xl py-3 px-4 outline-none ring-1 ring-white/5 focus:ring-2 focus:ring-pink-500/40"
+                  className="w-full bg-[#071021] placeholder:text-slate-500 rounded-2xl py-3 px-4 inline outline-none ring-1 ring-white/5 focus:ring-2 focus:ring-pink-500/40"
                 />
-                <div className="absolute right-3 top-3 text-slate-400">⌕</div>
+                <div className="absolute right-2 cursor-pointer px-5 py-1.5 inline  bg-[#E54957] top-3  rounded-lg text-2xl">⌕</div>
               </div>
               <div className="hidden sm:flex items-center gap-3">
                 <button className="px-3 py-2 rounded-lg bg-white/5 hover:bg-white/6">
                   Browse
                 </button>
-                <button className="px-3 py-2 rounded-lg bg-white/5 hover:bg-white/6">
-                  Upload
-                </button>
+                
               </div>
             </div>
             <div className="flex items-center gap-3">
@@ -230,7 +203,7 @@ export default function DashBoard() {
               </div>
               <div className="md:col-span-1 flex items-center justify-center">
                 <div className="w-full max-w-[360px] rounded-xl overflow-hidden relative bg-gradient-to-b from-[#0b0f1a] to-[#071022] p-4">
-                  <img
+                  <Image
                     src="/images/hero-game.jpg"
                     alt="hero"
                     className="w-full h-56 md:h-64 object-cover rounded-lg"
@@ -257,7 +230,7 @@ export default function DashBoard() {
           {/* CARDS ROW */}
           <section>
             <div className="flex items-center justify-between mb-4">
-              <h3 className="text-lg font-bold">Actual games</h3>
+              <h3 className="text-lg font-bold">Trending games </h3>
               <div className="flex items-center gap-2">
                 <button className="w-8 h-8 rounded-full bg-white/5">◀</button>
                 <button className="w-8 h-8 rounded-full bg-white/5">▶</button>

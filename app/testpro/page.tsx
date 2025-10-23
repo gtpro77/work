@@ -27,6 +27,8 @@ const SlidePro = () => {
 
   return (
     <div className="relative w-auto ml-5 mr-5 md:ml-15 md:mr-15  ">
+      <span className=" font-bold text-white text-2xl ml-3 mb-3 inline  ">Car Games</span>
+      <button className="bg-[#E54957] text-white px-4 py-1 ml-2 rounded-4xl font-bold text-sm " >View More</button>
       {/* Left Arrow */}
       <button
         onClick={() => scroll("left")}
@@ -38,11 +40,11 @@ const SlidePro = () => {
       {/* Carousel Container */}
 
 
-      <Link href= "/gameformat" >
+      <Link href= "/gameformat/id" >
       <div
       
         ref={scrollRef}
-        className="flex gap-4 overflow-x-auto scroll-smooth scrollbar-hide px-2  "
+        className="flex gap-4 overflow-x-auto scroll-smooth scrollbar-hide px-2 mt-3   "
       >
         {games.map((game) => (
           <div
